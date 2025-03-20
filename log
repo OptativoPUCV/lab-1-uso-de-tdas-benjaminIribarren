@@ -2,3 +2,29 @@ Thu Mar 20 17:49:42 HSP 2025:
  tests:  0|5
 total_score: 0/70
 3f6cb15
+Thu Mar 20 17:58:09 HSP 2025: 
+ exercises.c | 31 ++++++++++++++++++++++++++++++-
+ 1 file changed, 30 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'crea_lista':
+exercises.c:46:10: error: redefinition of 'L'
+    List* L = (List*)malloc(sizeof(List*));
+          ^
+exercises.c:45:10: note: previous definition of 'L' was here
+    List* L = create_list();
+          ^
+exercises.c: In function 'sumaLista':
+exercises.c:61:14: error: implicit declaration of function 'fisrt' [-Werror=implicit-function-declaration]
+    int* dato=fisrt(L);
+              ^~~~~
+exercises.c:61:14: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c: In function 'copia_pila':
+exercises.c:107:11: error: 'return' with a value, in function returning void [-Werror]
+    return P2;
+           ^~
+exercises.c:90:6: note: declared here
+ void copia_pila(Stack* P1, Stack* P2) {
+      ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+b7fc3c0

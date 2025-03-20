@@ -43,6 +43,11 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
+   List* L = (List*)malloc(sizeof(List*));
+   for(int i=0; i<= 10 ; i++){
+      
+   }
+
    return L;
 }
 
@@ -52,7 +57,14 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   return 0;
+   int suma=0;
+   int* dato=fisrt(L);
+
+   while(dato!=NULL){
+      suma+=(*dato);
+      dato=next(L);
+   }
+   return suma;
 }
 
 /*
@@ -76,6 +88,23 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
+   Stack* auxiliary_stack = create_stack();
+
+   int* dato=top(P1);
+   while(dato!=NULL){
+      push(auxiliary_stack, dato);
+      pop(P1);
+      dato=top(P1);
+   }
+
+   int* dato_aux=top(auxiliary_stack);
+   while(dato_aux!=NULL){
+      push(P2,dato_aux);
+      pop(auxiliary_stack);
+      dato_aux=top(auxiliary_stack);
+   }
+
+   return P2;
 }
 
 /*
