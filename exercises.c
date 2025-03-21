@@ -82,7 +82,6 @@ void eliminaElementos(List*L, int elem){
    while(dato!=NULL){
       if(*dato==elem){
          popCurrent(L);
-         continue;
       }
       dato=next(L);
    }
@@ -111,8 +110,6 @@ void copia_pila(Stack* P1, Stack* P2) {
       pop(auxiliary_stack);
       dato_aux=top(auxiliary_stack);
    }
-
-   return P2;
 }
 
 /*
@@ -123,7 +120,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   Stack* pila=create_stack();
+   //Stack* pila=create_stack();
    
    return 0;
 }
