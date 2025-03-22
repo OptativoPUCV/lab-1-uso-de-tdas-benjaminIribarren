@@ -126,10 +126,10 @@ int parentesisBalanceados(char *cadena) {
       char caracter = cadena[i];
       
       if (caracter == '(') {
-         push(pila, caracter);
+         push(pila, &caracter);
       }
        else if (caracter == ')') {
-         int* dato = top(pila);
+         char* dato = top(pila);
          if (dato == NULL) 
             return 0;
          else{

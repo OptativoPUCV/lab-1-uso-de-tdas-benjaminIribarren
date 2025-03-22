@@ -435,3 +435,9 @@ stack.h:11:31: note: expected 'void *' but argument is of type 'char'
       |                         ~~~~~~^~~~
 Compilation failed
 4b61733
+Fri, Mar 21, 2025 11:41:22 PM: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  5|1
+total_score: 50/70
+c7146d7
