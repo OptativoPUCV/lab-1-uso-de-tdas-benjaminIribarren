@@ -870,3 +870,13 @@ exercises.c:127:24: error: cast to pointer from integer of different size [-Werr
 cc1.exe: all warnings being treated as errors
 Compilation failed
 e5a4789
+Sat, Mar 22, 2025  2:58:48 PM: 
+ exercises.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:136:17: error: initialization of 'char' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+  136 |          char c=top(pila);
+      |                 ^~~
+Compilation failed
+8d7227d
