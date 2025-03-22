@@ -849,3 +849,13 @@ exercises.c:139:20: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 03b2f2a
+Sat, Mar 22, 2025  2:46:32 PM: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:127:24: error: initialization of 'char *' from 'char' makes pointer from integer without a cast [-Wint-conversion]
+  127 |       char* caracter = cadena[i];
+      |                        ^~~~~~
+Compilation failed
+3d8f6dc
