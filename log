@@ -459,3 +459,26 @@ Sat, Mar 22, 2025 12:08:41 AM:
  tests:  5|1
 total_score: 50/70
 b2b1499
+Sat, Mar 22, 2025 12:11:42 AM: 
+ exercises.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:134:10: error: this 'else' clause does not guard... [-Werror=misleading-indentation]
+  134 |          else
+      |          ^~~~
+exercises.c:136:13: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'else'
+  136 |             if ((caracter == ')' && top != '(') ||
+      |             ^~
+exercises.c:136:41: error: comparison between pointer and integer [-Werror]
+  136 |             if ((caracter == ')' && top != '(') ||
+      |                                         ^~
+exercises.c:137:37: error: comparison between pointer and integer [-Werror]
+  137 |             (caracter == ']' && top != '[') ||
+      |                                     ^~
+exercises.c:138:37: error: comparison between pointer and integer [-Werror]
+  138 |             (caracter == '}' && top != '{')) {
+      |                                     ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+95cc43d
