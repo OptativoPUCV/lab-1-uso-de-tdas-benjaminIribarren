@@ -788,3 +788,35 @@ Sat, Mar 22, 2025 12:01:58 PM:
  tests:  4|1
 total_score: 50/70
 6e00b6a
+Sat, Mar 22, 2025  2:45:36 PM: 
+ exercises.c | 19 ++++++++-----------
+ 1 file changed, 8 insertions(+), 11 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:128:24: error: initialization of 'char *' from 'char' makes pointer from integer without a cast [-Wint-conversion]
+  128 |       char* caracter = cadena[i];
+      |                        ^~~~~~
+exercises.c:132:25: error: comparison between pointer and integer [-Werror]
+  132 |       else if (caracter == ')' || caracter == ']' || caracter == '}') {
+      |                         ^~
+exercises.c:132:44: error: comparison between pointer and integer [-Werror]
+  132 |       else if (caracter == ')' || caracter == ']' || caracter == '}') {
+      |                                            ^~
+exercises.c:132:63: error: comparison between pointer and integer [-Werror]
+  132 |       else if (caracter == ')' || caracter == ']' || caracter == '}') {
+      |                                                               ^~
+exercises.c:138:24: error: comparison between pointer and integer [-Werror]
+  138 |          if ((caracter == ')' && *c == '(') ||
+      |                        ^~
+exercises.c:139:20: error: comparison between pointer and integer [-Werror]
+  139 |          (caracter == ']' && *c == '[') ||
+      |                    ^~
+exercises.c:140:20: error: comparison between pointer and integer [-Werror]
+  140 |          (caracter == '}' && *c == '{')){
+      |                    ^~
+exercises.c:125:8: error: unused variable 'contador' [-Werror=unused-variable]
+  125 |    int contador=0;
+      |        ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+51cfbf8
