@@ -149,3 +149,14 @@ Fri, Mar 21, 2025  7:32:08 PM:
  tests:  3|2
 total_score: 40/70
 aeaf12d
+Fri, Mar 21, 2025 10:27:14 PM: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+exercises.c: In function 'copia_pila':
+exercises.c:102:11: error: unused variable 'dato_copia' [-Werror=unused-variable]
+  102 |       int dato_copia = *dato;
+      |           ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+6563b67
