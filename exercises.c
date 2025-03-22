@@ -134,11 +134,11 @@ int parentesisBalanceados(char *cadena) {
          else
             pop(pila);
          
-         if ((caracter == ')' && top(pila) != '(') ||
+         /*if ((caracter == ')' && top(pila) != '(') ||
          (caracter == ']' && top(pila) != '[') ||
          (caracter == '}' && top(pila) != '{')) 
             return 0;
-         }
+         }*/
    }
    return 1;   
 }
