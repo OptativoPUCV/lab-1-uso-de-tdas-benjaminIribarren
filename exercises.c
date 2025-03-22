@@ -122,33 +122,36 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) {
    Stack* pila=create_stack();
-   for (int i = 0; cadena[i] != '\0'; i++) {
+   int contador=0;
+   
+   for (int i=0; cadena[i]!='\0'; i++) {
       char caracter = cadena[i];
-      
+
       if(caracter == '(' || caracter == '[' || caracter == '{') 
          push(pila, &caracter);
+         contador++;
       
-      else if (caracter == ')' || caracter == ']' || caracter == '}') {
-         
+         if (caracter == ')' || caracter == ']' || caracter == '}') {
          char* c= top(pila);
          if (c == NULL){
             return 0;
          }
          
-         char* caracterPila= top(pila);
-         if ((caracter == ')' && *caracterPila == '(') ||
-         (caracter == ']' && *caracterPila == '[') ||
-         (caracter == '}' && *caracterPila == '{')){
+         if ((caracter == ')' && *c == '(') ||
+         (caracter == ']' && *c == '[') ||
+         (caracter == '}' && *c == '{')){
             pop(pila);
-            //return 0;
          }
-         //pop(pila);      
+         else{
+            return 0;
+         }       
       }
    }
-   return 1;   
+   if(contador % 2==0){
+      return 1;
+   }
+   else{
+      return 0;
+   }  
 }
-   
-/*if ((caracter == ')' && *caracterPila != '(') ||
-         (caracter == ']' && *caracterPila != '[') ||
-         (caracter == '}' && *caracterPila != '{')){ */
 

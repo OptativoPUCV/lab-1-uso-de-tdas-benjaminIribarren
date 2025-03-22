@@ -768,3 +768,17 @@ Sat, Mar 22, 2025  9:07:43 AM:
  tests:  5|1
 total_score: 50/70
 672bcdd
+Sat, Mar 22, 2025 11:58:37 AM: 
+ exercises.c | 27 +++++++++++++++------------
+ 1 file changed, 15 insertions(+), 12 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:130:7: error: this 'if' clause does not guard... [-Werror=misleading-indentation]
+  130 |       if(caracter == '(' || caracter == '[' || caracter == '{')
+      |       ^~
+exercises.c:132:10: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  132 |          contador++;
+      |          ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+d9dd51a
