@@ -137,7 +137,7 @@ int parentesisBalanceados(char *cadena) {
             pop(pila);
          } 
       }
-   return 1;
    }
+   return 1;
 }
 
